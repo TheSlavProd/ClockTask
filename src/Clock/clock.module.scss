@@ -1,0 +1,158 @@
+.clock {  
+        &__hour{
+            width: 10px;
+            height: 30%;
+            background-color: rgb(9, 156, 66);
+        }
+        &__minute{
+            width: 7px;
+            height: 40%;
+            background-color: black;
+        }
+        &__second{
+            width: 5px;
+            height: 45%;
+            background-color: rgb(151, 126, 43);
+        } 
+        width: 300px;
+        height: 300px;
+        background-color: rgba(255,255,255,0.8);
+        border-radius: 50%;
+        border: 4px solid white;
+        box-shadow:  -8px 8px 15px rgba(225,225,225,0.05),
+             20px 20px 20px rgba(0,0,0,0.2),
+             inset -8px -8px 15px rgba(225,225,225,0.05),
+             inset 20px 20px 20px rgba(0,0,0,0.2);
+        position: relative;
+       
+}
+
+.clock::after{
+    content: '';
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 11;
+}
+
+.hand{
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    border: 1px solid white;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: black;
+    transform-origin: bottom;
+    z-index: 10;
+}
+
+.number{
+    --roation: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--roation));
+   
+    font-size: 1.5rem;
+   padding: 18px;
+}
+
+.number::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 15px;
+    background-color: rgb(31, 138, 238);
+}
+
+.number1 {
+    --roation: 30deg
+}
+
+.number2{
+    --roation: 60deg
+}
+.number3{
+    --roation: 90deg
+   }
+.number4{
+    --roation: 120deg
+   }
+   .number5{
+    --roation: 150deg
+   }
+   .number6{
+    --roation: 180deg
+   }
+   .number7{
+    --roation: 210deg
+   }
+   .number8{
+    --roation: 240deg
+   }
+   .number9{
+    --roation: 270deg
+   }
+   
+  .number10{
+    --roation: 300deg
+   }
+   .number11{
+    --roation: 330deg
+   }
+
+.item1{
+    transform: rotate(-30deg);
+}
+
+.item2{
+    transform: rotate(-60deg);
+}
+
+.item3{
+    transform: rotate(-90deg);
+}
+
+.item4{
+    transform: rotate(-120deg);
+}
+
+
+.item5{
+    transform: rotate(-150deg);
+}
+
+.item6{
+    transform: rotate(-180deg);
+}
+
+.item7{
+    transform: rotate(-210deg);
+}
+
+.item8{
+    transform: rotate(-240deg);
+}
+
+.item9{
+    transform: rotate(-270deg);
+}
+
+.item10{
+    transform: rotate(-300deg);
+}
+
+.item11{
+    transform: rotate(-330deg);
+}
+
