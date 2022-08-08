@@ -21,9 +21,9 @@ const App = () => {
 const [state, setState] = React.useState(stateClock)
 
 const setClock = async () =>{
-  const {data} = await axios.get("http://worldtimeapi.org/api/timezone/Europe/Moscow")
-  const newData = data.datetime
-  const currentDate = new Date(newData)
+  //const {data} = await axios.get("http://worldtimeapi.org/api/timezone/Europe/Moscow")
+ // const newData = data.datetime
+  const currentDate = new Date
   let secondArrow = currentDate.getSeconds() / 60
   let minuteArrow = (secondArrow + currentDate.getMinutes()) / 60
   let hourArrow = (minuteArrow + currentDate.getHours()) / 12
